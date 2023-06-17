@@ -5,7 +5,19 @@ let message;
 
 validateSpeed(speed)
 
+if (speed < speedLimit) {
+    message = 'Ok'
+} else {
+    let limitExceeded = speed - speedLimit;
+    let demeritPoints = Math.trunc(limitExceeded / demeritBounds)
+    if(demeritPoints>12){
+        message = 'License suspended'
+    }else{
+        message = `Total demerit points : ${demeritPoints}`
+    }
+}
 
+console.log(message)
 
 function validateSpeed(carSpeed) {
     if (Number.isNaN(Number(carSpeed)) || carSpeed < 0) {

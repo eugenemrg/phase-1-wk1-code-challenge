@@ -34,7 +34,7 @@ console.log(`Grade is ${grade}`)
  * @param {string} studentMarks Student mark from prompt input
  */
 function validateMarks(studentMarks) {
-    if (Number.isNaN(Number(studentMarks)) || studentMarks < 0 || studentMarks > 100) {
+    if (studentMarks.length === 0 || Number.isNaN(Number(studentMarks)) || studentMarks < 0 || studentMarks > 100) {
         if (confirm('Invalid input. Enter valid student marks (between 0-100). Try again?')) {
             marks = prompt('Enter valid student marks (between 0-100) :')
             validateMarks(marks)

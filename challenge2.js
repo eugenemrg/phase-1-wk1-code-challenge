@@ -35,7 +35,7 @@ console.log(message)
  * 
  */
 function validateSpeed(carSpeed) {
-    if (Number.isNaN(Number(carSpeed)) || carSpeed < 0) {
+    if (carSpeed.length === 0 || Number.isNaN(Number(carSpeed)) || carSpeed < 0) {
         if (confirm('Invalid car speed. Try again ?')) {
             speed = prompt('Enter valid car speed : ')
             validateSpeed(speed)

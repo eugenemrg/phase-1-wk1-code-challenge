@@ -36,7 +36,7 @@ alert(`Grade is ${grade}`)
 function isValidMarks(studentMarks) {
     if (Number.isNaN(Number(studentMarks)) || studentMarks < 0 || studentMarks > 100) {
         if (confirm('Invalid input. Enter valid student marks (between 1-100). Try again?')) {
-            marks = prompt('Invalid input. Enter valid student marks (between 1-100)')
+            marks = prompt('Invalid input. Enter valid student marks (between 0-100)')
             isValidMarks(marks)
         }
     }else{

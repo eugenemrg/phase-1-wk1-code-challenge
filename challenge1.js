@@ -4,7 +4,7 @@ let marks = prompt('Enter student marks :')
 /** @global Stores grade assigned to the marks*/
 let grade
 
-isValidMarks(marks)
+validateMarks(marks)
 
 if (marks > 79) { 
     // A > 79
@@ -33,7 +33,7 @@ alert(`Grade is ${grade}`)
  * 
  * @param {number} studentMarks Student mark from prompt input
  */
-function isValidMarks(studentMarks) {
+function validateMarks(studentMarks) {
     if (Number.isNaN(Number(studentMarks)) || studentMarks < 0 || studentMarks > 100) {
         if (confirm('Invalid input. Enter valid student marks (between 0-100). Try again?')) {
             marks = prompt('Enter valid student marks (between 0-100) :')

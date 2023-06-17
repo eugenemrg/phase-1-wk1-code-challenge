@@ -1,6 +1,6 @@
 /** @global Speed limit */
 const speedLimit = 70
-/** @global Value above speed limit that gives one demerit point */
+/** @global Value above speed limit that earns the driver a demerit point */
 const demeritBounds = 5
 /** @global Current car speed to be checked */
 let speed = prompt('Enter car speed : ')

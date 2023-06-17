@@ -4,7 +4,7 @@ const speedLimit = 70
 const demeritBounds = 5
 /** @global Current car speed to be checked */
 let speed = prompt('Enter car speed : ')
-/** @global Message to be printed out after check */
+/** @global Message to be printed out after speed check */
 let message;
 
 validateSpeed(speed)

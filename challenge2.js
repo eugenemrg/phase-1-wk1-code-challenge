@@ -24,7 +24,7 @@ if (speed < speedLimit) {
 }
 
 /** message output */
-alert(message)
+console.log(message)
 
 /**
  * Validates speed input.

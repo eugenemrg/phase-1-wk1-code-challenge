@@ -2,7 +2,7 @@
 let marks = prompt('Enter student marks :')
 
 /** @global Stores grade assigned to the marks*/
-let grade;
+let grade
 
 isValidMarks(marks)
 
@@ -40,6 +40,6 @@ function isValidMarks(studentMarks) {
             isValidMarks(marks)
         }
     }else{
-        marks = parseInt(studentMarks, 10);
+        marks = parseInt(studentMarks, 10)
     }
 }

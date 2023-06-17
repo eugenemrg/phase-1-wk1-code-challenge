@@ -7,17 +7,23 @@ let grade;
 isValidMarks(marks)
 
 if (marks > 79) { 
+    // A > 79
     grade = 'A'
 } else if (marks >= 60 && marks <= 79) {
+    // B - 60 to 79
     grade = 'B'
 } else if (marks > 49 && marks <= 59) {
+    // C - 59 to 49
     grade = 'C'
 } else if (marks >= 40 && marks <= 49) {
+    // D - 40 to 49
     grade = 'D'
 } else {
+    // E - less 40
     grade = 'E'
 }
 
+// Outputs grade
 console.log(`Grade is ${grade}`)
 
 /**

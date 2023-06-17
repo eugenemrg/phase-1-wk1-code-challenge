@@ -1,7 +1,7 @@
 /** @global Speed limit */
-const speedLimit = 70;
+const speedLimit = 70
 /** @global Value above speed limit that gives one demerit point */
-const demeritBounds = 5;
+const demeritBounds = 5
 /** @global Current car speed to be checked */
 let speed = prompt('Enter car speed : ')
 /** @global Message to be printed out after check */
@@ -13,7 +13,7 @@ if (speed < speedLimit) {
     message = 'Ok'
 } else {
     /** Value of car speed above speed limit */
-    let excessSpeed = speed - speedLimit;
+    let excessSpeed = speed - speedLimit
     /** Total demerit points for speeding */
     let demeritPoints = Math.trunc(excessSpeed / demeritBounds)
     if(demeritPoints>12){

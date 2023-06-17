@@ -31,7 +31,8 @@ alert(message)
  * Invalid speed input prompts user to give valid speed,
  * prompts recursively till valid or cancelled by user.
  * 
- * @param {number} carSpeed Car speed
+ * @param {string} carSpeed Car speed from input prompt
+ * 
  */
 function validateSpeed(carSpeed) {
     if (Number.isNaN(Number(carSpeed)) || carSpeed < 0) {

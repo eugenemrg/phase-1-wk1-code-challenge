@@ -31,7 +31,7 @@ alert(`Grade is ${grade}`)
  * Invalid marks prompts user to give valid marks, prompts
  * recursively till valid or cancelled by user.
  * 
- * @param {number} studentMarks Student mark from prompt input
+ * @param {string} studentMarks Student mark from prompt input
  */
 function validateMarks(studentMarks) {
     if (Number.isNaN(Number(studentMarks)) || studentMarks < 0 || studentMarks > 100) {

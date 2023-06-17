@@ -19,7 +19,7 @@ if (speed < speedLimit) {
     if(demeritPoints>12){
         message = 'License suspended'
     }else{
-        message = `Total demerit points : ${demeritPoints}`
+        message = `Points: ${demeritPoints}`
     }
 }
 

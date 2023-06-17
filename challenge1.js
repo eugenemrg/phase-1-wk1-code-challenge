@@ -24,7 +24,7 @@ if (marks > 79) {
 }
 
 // Outputs grade
-console.log(`Grade is ${grade}`)
+alert(`Grade is ${grade}`)
 
 /**
  * Checks if mark is valid. 

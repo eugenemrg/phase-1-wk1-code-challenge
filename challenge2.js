@@ -16,11 +16,7 @@ if (speed < speedLimit) {
     let excessSpeed = speed - speedLimit
     /** Total demerit points for speeding */
     let demeritPoints = Math.trunc(excessSpeed / demeritBounds)
-    if(demeritPoints>12){
-        message = 'License suspended'
-    }else{
-        message = `Points: ${demeritPoints}`
-    }
+    message = (demeritPoints>12) ? 'License suspended' : `Points: ${demeritPoints}`
 }
 
 /** message output */

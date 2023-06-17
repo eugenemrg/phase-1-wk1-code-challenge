@@ -17,7 +17,7 @@ if (speed < speedLimit) {
     }
 }
 
-console.log(message)
+alert(message)
 
 function validateSpeed(carSpeed) {
     if (Number.isNaN(Number(carSpeed)) || carSpeed < 0) {

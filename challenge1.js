@@ -37,7 +37,7 @@ function validateMarks(studentMarks) {
     if (Number.isNaN(Number(studentMarks)) || studentMarks < 0 || studentMarks > 100) {
         if (confirm('Invalid input. Enter valid student marks (between 0-100). Try again?')) {
             marks = prompt('Enter valid student marks (between 0-100) :')
-            isValidMarks(marks)
+            validateMarks(marks)
         }
     }else{
         marks = parseInt(studentMarks, 10)

@@ -1,4 +1,7 @@
+/** @global Stores marks input from prompt */
 let marks = prompt('Enter student marks :')
+
+/** @global Stores grade assigned to the marks*/
 let grade;
 
 isValidMarks(marks)
@@ -17,6 +20,13 @@ if (marks > 79) {
 
 console.log(`Grade is ${grade}`)
 
+/**
+ * Checks if mark is valid. 
+ * Invalid marks prompts user to give valid marks, prompts
+ * recursively till valid or cancelled by user.
+ * 
+ * @param {number} studentMarks Student mark from prompt input
+ */
 function isValidMarks(studentMarks) {
     if (Number.isNaN(Number(studentMarks)) || studentMarks < 0 || studentMarks > 100) {
         if (confirm('Invalid input. Enter valid student marks (between 1-100). Try again?')) {

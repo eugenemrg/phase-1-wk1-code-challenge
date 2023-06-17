@@ -1,5 +1,6 @@
 # PHASE 1 - WEEK 1: CODE CHALLENGE 
 
+
 ## **Challenge 1**: *Student Grade Generator (Toy Problem)*
 
 Prompts the user to input student marks. Then output the correct grade.
@@ -8,11 +9,13 @@ Prompts the user to input student marks. Then output the correct grade.
 > **Challenge 1 Solution:** [challenge1.js](https://github.com/eugenemrg/phase-1-wk1-code-challenge/blob/main/challenge1.js)
 
 
+
 ## **Challenge 2**: *Speed Detector (Toy Problem)*
 
 Takes as input the speed of a car. If the speed is less than 70, it should print “Ok”. Otherwise, for every 5 km/s above the speed limit (70), it should give the driver one demerit point and print the total number of demerit points.
 
 > **Challenge 2 Solution:** [challenge2.js](https://github.com/eugenemrg/phase-1-wk1-code-challenge/blob/main/challenge2.js)
+
 
 
 ## **Challenge 3**: *Net Salary Calculator (Toy Problem)*

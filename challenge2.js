@@ -12,9 +12,7 @@ validateSpeed(speed)
 if (speed < speedLimit) {
     message = 'Ok'
 } else {
-    /** Value of car speed above speed limit */
     let excessSpeed = speed - speedLimit
-    /** Total demerit points for speeding */
     let demeritPoints = Math.trunc(excessSpeed / demeritBounds)
     message = (demeritPoints>12) ? 'License suspended' : `Points: ${demeritPoints}`
 }

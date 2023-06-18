@@ -1,3 +1,5 @@
+console.log(getNetSalary(20000, 15000))
+
 function getNetSalary(employeeBasicSalary, employeeBenefits) {
     let employeeGrossIncome = employeeBasicSalary + employeeBenefits
     let NHIF = getNHIFContribution(employeeGrossIncome)
@@ -95,5 +97,3 @@ function getPAYE(employeeGrossIncome, ...totalDeductions) {
     monthlyPAYEContribtion = Number(monthlyPAYEContribtion.toFixed(2))
     return monthlyPAYEContribtion
 }
-
-console.log(getNetSalary(10000, 10000))

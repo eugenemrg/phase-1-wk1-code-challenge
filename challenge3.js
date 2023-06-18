@@ -1,8 +1,10 @@
+// Sample output
 console.log(getNetSalary(20000, 15000))
 
 /**
  * Returns a summary of employee net salary information.
  * Prints out net salary of an employee.
+ * Prints out salary information
  * 
  * @param {number} employeeBasicSalary Basic salary of employee
  * @param {number} employeeBenefits Additional benefits and allowances to employee
@@ -16,6 +18,7 @@ function getNetSalary(employeeBasicSalary, employeeBenefits) {
 
     employeeTotalDeductions = NHIF + NSSF + PAYE
     employeeNetSalary = employeeGrossIncome - employeeTotalDeductions
+
     let salarySummary = {
         basicSalary: employeeBasicSalary,
         benefits: employeeBenefits,
@@ -31,10 +34,16 @@ function getNetSalary(employeeBasicSalary, employeeBenefits) {
 
     console.log(`Net Salary: ${employeeNetSalary}`);
     printSalarySummary(salarySummary)
-    
+
     return salarySummary
 }
 
+/**
+ * Calculates expected NHIF deduction from employee salary
+ * 
+ * @param {number} employeeGrossIncome Employee gross salary
+ * @returns {number} NHIF deduction amount
+ */
 function getNHIFContribution(employeeGrossIncome) {
 
     const grossIncome = employeeGrossIncome
@@ -79,6 +88,12 @@ function getNHIFContribution(employeeGrossIncome) {
     return NHIFContribution
 }
 
+/**
+ * Calculates expected NSSF deduction from employee salary
+ * 
+ * @param {number} employeeGrossIncome Employee gross salary
+ * @returns {number} NSSF deduction amount
+ */
 function getNSSFContribution(employeeGrossIncome) {
     // NSSF - 6 percent employee contribution, limit 6000
     let NSSFContribution = employeeGrossIncome * 0.06
@@ -86,6 +101,13 @@ function getNSSFContribution(employeeGrossIncome) {
     return (NSSFContribution < 6000) ? NSSFContribution : 6000;
 }
 
+/**
+ * Calculates expected PAYE (Pay-As-You-Earn) deduction from employee salary
+ * 
+ * @param {number} employeeGrossIncome Employee gross salary
+ * @param  {...any} totalDeductions Employee pre-tax(before PAYE) deductions as an array
+ * @returns PAYE deduction amount
+ */
 function getPAYE(employeeGrossIncome, ...totalDeductions) {
     const personalRelief = 2400
     const deductions = totalDeductions.reduce((a, b) => a + b, 0)
@@ -110,7 +132,12 @@ function getPAYE(employeeGrossIncome, ...totalDeductions) {
     return monthlyPAYEContribtion
 }
 
-function  printSalarySummary(salarySummary) {
+/**
+ * Print salary summary information
+ * 
+ * @param {object} salarySummary Object containing salary information
+ */
+function printSalarySummary(salarySummary) {
     console.log(`
     Salary summary:
 

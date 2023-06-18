@@ -1,5 +1,13 @@
 console.log(getNetSalary(20000, 15000))
 
+/**
+ * Returns a summary of employee net salary information.
+ * Prints out net salary of an employee.
+ * 
+ * @param {number} employeeBasicSalary Basic salary of employee
+ * @param {number} employeeBenefits Additional benefits and allowances to employee
+ * @returns {object} employee net salary information including deductions e.g. taxes as an object
+ */
 function getNetSalary(employeeBasicSalary, employeeBenefits) {
     let employeeGrossIncome = employeeBasicSalary + employeeBenefits
     let NHIF = getNHIFContribution(employeeGrossIncome)
@@ -8,8 +16,7 @@ function getNetSalary(employeeBasicSalary, employeeBenefits) {
 
     employeeTotalDeductions = NHIF + NSSF + PAYE
     employeeNetSalary = employeeGrossIncome - employeeTotalDeductions
-
-    return {
+    let salarySummary = {
         basicSalary: employeeBasicSalary,
         benefits: employeeBenefits,
         grossSalary: employeeGrossIncome,
@@ -21,6 +28,11 @@ function getNetSalary(employeeBasicSalary, employeeBenefits) {
         totalDeductions: employeeTotalDeductions,
         netSalary: employeeNetSalary
     }
+
+    console.log(`Net Salary: ${employeeNetSalary}`);
+    printSalarySummary(salarySummary)
+    
+    return salarySummary
 }
 
 function getNHIFContribution(employeeGrossIncome) {
@@ -96,4 +108,27 @@ function getPAYE(employeeGrossIncome, ...totalDeductions) {
     monthlyPAYEContribtion = monthlyPAYEContribtion - personalRelief
     monthlyPAYEContribtion = Number(monthlyPAYEContribtion.toFixed(2))
     return monthlyPAYEContribtion
+}
+
+function  printSalarySummary(salarySummary) {
+    console.log(`
+    Salary summary:
+
+        Basic Salary: ${salarySummary.basicSalary}
+        Benefits: ${salarySummary.benefits}
+
+        Gross Salary: ${salarySummary.grossSalary}
+
+        --------------------------
+
+        Deductions:
+            NSSF: ${salarySummary.deductions.employeePensionContribution}
+            NHIF: ${salarySummary.deductions.insuranceRelief}
+            PAYE: ${salarySummary.deductions.employeePAYE}
+        Total deductions: ${salarySummary.totalDeductions}
+
+        ---------------------------
+
+        Net Salary: ${salarySummary.netSalary}
+        `);
 }

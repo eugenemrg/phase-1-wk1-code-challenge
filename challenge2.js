@@ -20,6 +20,7 @@ if (speed < speedLimit) {
     message = (demeritPoints>12) ? 'License suspended' : `Points: ${demeritPoints}`
 }
 
+// Output message to driver
 console.log(message)
 
 /**

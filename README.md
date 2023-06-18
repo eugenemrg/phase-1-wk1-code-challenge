@@ -2,7 +2,6 @@
 
 Phase 1 - Week 1 - end of week code challenge
 
-&nbsp;
 
 ### **Challenge 1**: Student Grade Generator (Toy Problem)
 

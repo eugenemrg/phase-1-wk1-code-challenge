@@ -41,7 +41,7 @@ A program whose major task is to calculate an individual’s Net Salary by getti
 &nbsp;
 
 ## Authors
-- [Eugene](https://github.com/eugenemrg) 
+- [@eugenemrg](https://github.com/eugenemrg) 
 
 &nbsp;
 

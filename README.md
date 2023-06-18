@@ -41,9 +41,7 @@ A program whose major task is to calculate an individual’s Net Salary by getti
 &nbsp;
 
 ## Authors
-- [eugenemrg](https://github.com/eugenemrg) 
-
-&nbsp;
+[eugenemrg](https://github.com/eugenemrg) 
 
 ## Setup
 - Visual Studio Code

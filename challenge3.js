@@ -55,8 +55,8 @@ function getNSSFContribution(employeeGrossIncome) {
 
 function getPAYE(employeeGrossIncome, ...totalDeductions) {
     const personalRelief = 2400
-    let deductions = totalDeductions.reduce((a, b) => a + b, 0)
-    let taxableIncome = employeeGrossIncome - deductions
+    const deductions = totalDeductions.reduce((a, b) => a + b, 0)
+    const taxableIncome = employeeGrossIncome - deductions
     let monthlyPAYEContribtion
 
     // Minimum monthly taxable income is KES. 24,001

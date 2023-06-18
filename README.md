@@ -37,3 +37,13 @@ A program whose major task is to calculate an individual’s Net Salary by getti
 
 ### Solution
 [Challenge 3 Solution](/challenge3.js)
+
+&nbsp;
+
+## Authors
+- [Eugene](https://github.com/eugenemrg) 
+
+&nbsp;
+
+## Setup
+- Visual Studio Code

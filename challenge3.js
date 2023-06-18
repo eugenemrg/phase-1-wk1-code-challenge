@@ -49,6 +49,7 @@ function getNHIFContribution(employeeGrossIncome) {
 function getNSSFContribution(employeeGrossIncome) {
     // NSSF - 6 percent employee contribution, limit 6000
     let NSSFContribution = employeeGrossIncome * 0.06
+    NSSFContribution = Number(NSSFContribution.toFixed(2))
     return (NSSFContribution < 6000) ? NSSFContribution : 6000;
 }
 

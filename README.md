@@ -1,6 +1,7 @@
 # PHASE 1 - WEEK 1: CODE CHALLENGE 
 
-Phase 1 - Week 1 - end of week code challenge
+Phase 1 - Week 1
+End of week code challenge
 
 &nbsp;
 

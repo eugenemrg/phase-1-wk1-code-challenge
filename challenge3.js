@@ -1,5 +1,24 @@
 function getNetSalary(employeeBasicSalary, employeeBenefits) {
+    let employeeGrossIncome = employeeBasicSalary + employeeBenefits
+    let NHIF = getNHIFContribution(employeeGrossIncome)
+    let NSSF = getNSSFContribution(employeeGrossIncome)
+    let PAYE = getPAYE(employeeGrossIncome, NHIF, NSSF)
 
+    employeeTotalDeductions = NHIF + NSSF + PAYE
+    employeeNetSalary = employeeGrossIncome - employeeTotalDeductions
+
+    return {
+        basicSalary: employeeBasicSalary,
+        benefits: employeeBenefits,
+        grossSalary: employeeGrossIncome,
+        deductions: {
+            insuranceRelief: NHIF,
+            employeePensionContribution: NSSF,
+            employeePAYE: PAYE
+        },
+        totalDeductions: employeeTotalDeductions,
+        netSalary: employeeNetSalary
+    }
 }
 
 function getNHIFContribution(employeeGrossIncome) {

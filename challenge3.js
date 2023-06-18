@@ -54,7 +54,27 @@ function getNSSFContribution(employeeGrossIncome) {
 }
 
 function getPAYE(employeeGrossIncome, ...totalDeductions) {
+    const personalRelief = 2400
+    let deductions = totalDeductions.reduce((a, b) => a + b, 0)
+    let taxableIncome = employeeGrossIncome - deductions
+    let monthlyPAYEContribtion
 
+    // Minimum monthly taxable income is KES. 24,001
+    // Individuals earning less monthly exempt from income tax
+    // since personal relief is greater than tax
+    if (taxableIncome <= 24000) return 0
+
+    if (taxableIncome <= 24000) {
+        monthlyPAYEContribtion = taxableIncome * 0.1;
+    } else if (taxableIncome > 24000 && taxableIncome <= 32333) {
+        monthlyPAYEContribtion = taxableIncome * 0.25
+    } else if (taxableIncome > 32333) {
+        monthlyPAYEContribtion = taxableIncome * 0.3
+    }
+
+    monthlyPAYEContribtion = monthlyPAYEContribtion - personalRelief
+    monthlyPAYEContribtion = Number(monthlyPAYEContribtion.toFixed(2))
+    return monthlyPAYEContribtion
 }
 
 console.log(getNetSalary(10000, 10000))
